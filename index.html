@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>たまご育成アプリ（背景動画版）</title>
+  <style>
+    /* 画面いっぱいに3Dを表示する基本スタイル */
+    body { 
+      margin: 0; 
+      overflow: hidden;
+      background: url('assets/back.gif') no-repeat center center fixed;
+      background-color: black;
+      background-size: cover; /* 背景を画面いっぱいに引き伸ばす */
+    }
+    canvas { display: block; }
+
+    /* 背景動画のスタイル設定 */
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* 背景にするため、一番後ろに置く */
+    }
+  </style>
+</head>
+<body>
+
+<!-- 背景用の動画 
+<video id="background-video" autoplay loop muted playsinline>
+  <source src="assets/20250428_1431_Starry_Sky.mp4" type="video/mp4">
+  お使いのブラウザは動画タグをサポートしていません。
+</video> -->
+
+<!-- Three.js本体の読み込み（インターネット経由） -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- 自分のThree.jsスクリプト読み込み -->
+<script src="script.js"></script>
+
+</body>
+</html>
